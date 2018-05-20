@@ -152,4 +152,4 @@ bot.on("message", async message => {
     if(cmd) cmd.run(bot, message, args);
     
       });
-bot.login(process.env.BOT_TOKEN);
+bot.login("NDA5NzUxOTY0NjYyODkwNTA4.DeLHOA.kn94b5Re_x0JDIX_yj5Lw73ylzQ");

@@ -167,8 +167,12 @@ module.exports.run = async (bot, message, args) => {
           },
                          {
             name: "?shorten <Url> <What you want it to be called>",
-            value: "SShortens the given link!"
+            value: "Shortens the given link!"
           },
+          {
+            name: "?npm (Npm Package)",
+            value: "Sends infomation about the NPM package"
+          }
       ],
       timestamp: new Date(),
       footer: {
