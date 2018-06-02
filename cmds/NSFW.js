@@ -30,6 +30,10 @@ module.exports.run = async (bot, message, args) => {
               name: "?lewd",
               value: "Nsfw lewd (`Only works on a NSFW Chanel`)"
           },
+          {
+              name: "?4k",
+              value: "Some 4k NSFW"
+          }
         ],
         timestamp: new Date(),
         footer: {
