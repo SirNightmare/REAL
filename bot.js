@@ -1,8 +1,35 @@
 const Discord = require("discord.js");
 const settings = require("./settings.json");
 const superagent = require('superagent')
+const Music = require('discord.js-musicbot-addon');
 const fs = require("fs");
 let client = new Discord.Client();
+
+Music.start(bot, {
+  youtubeKey: "AIzaSyChV72AqgUOWab694WT3zdK6EIbY0EGRuc",
+   prefix: "?",
+    helpCmd: "mhelp",
+    global: false,
+    maxQueueSize: 50,
+    playCmd: 'music',
+    playAlts: ["music", 'moosic'],
+    volumeCmd: 'vol',
+    thumbnailType: 'high',
+    leaveCmd: 'leave',
+    anyoneCanSkip: true,
+    disableLoop: false,
+    searchCmd: 'search',
+    requesterName: true,
+    inlineEmbeds: true,
+    queueCmd: 'queue',
+    queueAlts: ['queue', 'queueue'],
+    pauseCmd: 'pause',
+    resumeCmd: 'resume',
+    skipCmd: 'skip',
+    skipAlts: ["skip", "skipp"],
+    loopCmd: 'loop',
+    enableQueueStat: true,
+});
 
 var google = `<@409751964662890508>`
 
@@ -41,7 +68,7 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
     if(message.content.bot) return;
-  
+
   if(message.content.startsWith("Okay " + google + ", " + "what " + "was " + "you " + "coded " + "with" + "?")) {
     message.channel.startTyping();
     message.channel.send({embed: {
@@ -61,11 +88,11 @@ bot.on("message", async message => {
           icon_url: message.author.avatarURL,
           text: `${message.author.username}#${message.author.discriminator}`
         }
-      }       
+      }
     });
     message.channel.stopTyping();
  }
-  
+
   if (message.content.startsWith(`${settings.prefix}` + "dogs")) {
         const { body } = await superagent
     .get('https://dog.ceo/api/breeds/image/random');
@@ -75,7 +102,7 @@ bot.on("message", async message => {
     .setImage(body.message)
     message.channel.send({embed})
   }
-  
+
   if(message.content.startsWith(`${settings.prefix}` + "overwatch" + " Doomfist")) {
     var embed = new Discord.RichEmbed()
     .setColor(0x954D23)
@@ -91,7 +118,7 @@ bot.on("message", async message => {
     .setImage("https://d1u5p3l4wpay3k.cloudfront.net/overwatch_gamepedia/thumb/1/15/Doomfist_Artwork.png/252px-Doomfist_Artwork.png?version=c0b05e57e84040ed5edac1e2f8231c4b")
     message.channel.send({embed})
   }
-  
+
   if(message.content.startsWith(`${settings.prefix}` + "overwatch" + " Genji")) {
     var embed = new Discord.RichEmbed()
     .setColor(0x00FF00)
@@ -107,7 +134,7 @@ bot.on("message", async message => {
     .setImage("https://d1u5p3l4wpay3k.cloudfront.net/overwatch_gamepedia/thumb/d/d8/Genji-portrait.png/322px-Genji-portrait.png?version=284e7c2c19f78860c219f62dfc178ab1")
     message.channel.send({embed})
   }
-  
+
     if(message.content.startsWith(`${settings.prefix}` + "overwatch" + " McCree")) {
     var embed = new Discord.RichEmbed()
     .setColor(0xC0C0C0)
@@ -123,7 +150,7 @@ bot.on("message", async message => {
     .setImage("https://d1u5p3l4wpay3k.cloudfront.net/overwatch_gamepedia/thumb/d/d2/Mccree-portrait.png/264px-Mccree-portrait.png?version=000a91f377fd2d6a99ad43ed6f4bc63c")
     message.channel.send({embed})
     }
-      
+
           if(message.content.startsWith(`${settings.prefix}` + "overwatch" + " Pharah")) {
     var embed = new Discord.RichEmbed()
     .setColor(0xC0C0C0)
@@ -152,4 +179,7 @@ bot.on("message", async message => {
     if(cmd) cmd.run(bot, message, args);
     
       });
-bot.login(process.env.BOT_TOKEN);
+bot.login("NDA5NzUxOTY0NjYyODkwNTA4.Dfg-fg.KD423eDB30T-pF4a_VnBsHL8BxU");
+
+
+
