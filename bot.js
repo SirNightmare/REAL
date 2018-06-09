@@ -39,6 +39,7 @@ bot.on("ready", async () => {
     console.log("Prefix: " + settings.prefix);
     console.log(bot.commands);
     bot.user.setActivity("some awesome tunes!", {type: "LISTENING"});
+    bot.user.setAvatar(`https://i.imgur.com/H3LCqWS.png`)
 });
 
 bot.on("message", async message => {
