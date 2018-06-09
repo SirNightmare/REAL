@@ -24,6 +24,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor('RANDOM')
         .addField("**Question:**", question, true)
         .addField("**Answer:**", answer)
+        .setFooter(`Image made my MatthewJ217#3287`)
 
     message.channel.send({
         embed
