@@ -1,4 +1,3 @@
-
 const Discord = require("discord.js");
 const prefix = "?"
 let bot = new Discord.Client();
