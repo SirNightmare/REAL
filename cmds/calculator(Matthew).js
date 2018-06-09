@@ -20,10 +20,11 @@ module.exports.run = async (bot, message, args) => {
     }
 
     const embed = new Discord.RichEmbed()
-        .setThumbnail("http://www.iosicongallery.com/img/1024/calculator-2017-10-10.png")
+        .setThumbnail("https://i.imgur.com/4kXujAW.png")
         .setColor('RANDOM')
         .addField("**Question:**", question, true)
         .addField("**Answer:**", answer)
+        .setFooter(`Image made my MatthewJ217#3287`)
 
     message.channel.send({
         embed
