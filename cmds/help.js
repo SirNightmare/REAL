@@ -177,7 +177,6 @@ module.exports.run = async (bot, message, args) => {
       }
     }       
   });
-    message.author.send(`Make to join Sylveon's Official server at https://discord.gg/Ec9hRh8 :D`)
   }
 
 module.exports.help = {
