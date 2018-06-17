@@ -130,10 +130,6 @@ module.exports.run = async (bot, message, args) => {
             value: "Sends weather info about the selected area!"
           },
           {
-            name: "?gif (gif name)",
-            value: "Sends you a gif!"
-          },
-          {
             name: "?status",
             value: "Sends all nerdy infomation"
           },
