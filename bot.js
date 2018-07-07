@@ -23,6 +23,7 @@ fs.readdir("./cmds/", (err, files) => {
     return;
   }
 
+
   console.log(`Loading ${jsfiles.length} commands!`);
 
   jsfiles.forEach((f, i) => {
@@ -38,12 +39,15 @@ bot.on("ready", async () => {
     console.log("Token: " + settings.token);
     console.log("Prefix: " + settings.prefix);
     console.log(bot.commands);
-    bot.user.setPresence({ game: { name: `My Brother Leafeon | ?help for help`, url: 'https://twitch.tv/monstercat', type: 1 } });
-    bot.user.setAvatar(`https://i.imgur.com/H3LCqWS.png`)
+    bot.user.setActivity("some awesome tunes!", {type: "LISTENING"});
 });
 
 bot.on("message", async message => {
     if(message.content.bot) return;
+
+
+
+      // replace 1000 with an amout of time (measured in milliseconds, 1000 is one second)
 
   if(message.content.startsWith("Okay " + google + ", " + "what " + "was " + "you " + "coded " + "with" + "?")) {
     message.channel.startTyping();
@@ -155,7 +159,7 @@ bot.on("message", async message => {
     if(cmd) cmd.run(bot, message, args);
     
       });
-bot.login(process.env.BOT_TOKEN);
+bot.login("MzcxNjYwODI1Nzc1MzA4ODEw.DiLQgQ.OF34pIx4XbxQ9PgiCqH9mJN1ap4");
 
 
 

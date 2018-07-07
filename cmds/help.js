@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const prefix = "?"
 let bot = new Discord.Client();
 module.exports.run = async (bot, message, args) => {
-    message.channel.send({embed: {
+    message.author.send({embed: {
         color: 3447003,
         author: {
           name: bot.user.username,
@@ -94,10 +94,6 @@ module.exports.run = async (bot, message, args) => {
             value: "Shows you how many coins you have!"
           },
           {
-            name: "?xp",
-            value: "Shows you how much xp you have"
-          },
-          {
             name: "?level",
             value: "Shows you what level you are!"
           },
@@ -114,7 +110,7 @@ module.exports.run = async (bot, message, args) => {
       }       
     });
 
-    message.channel.send({embed: {
+    message.author.send({embed: {
       color: 3447003,
       author: {
         name: bot.user.username,
@@ -128,6 +124,10 @@ module.exports.run = async (bot, message, args) => {
         {
             name: "?weather (location)",
             value: "Sends weather info about the selected area!"
+          },
+          {
+            name: "?gif (gif name)",
+            value: "Sends you a gif!"
           },
           {
             name: "?status",
